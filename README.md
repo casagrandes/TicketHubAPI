@@ -1,3 +1,3 @@
 # TicketHub
 
-**A basic web API to work with Sequelize and Express**
+**A basic project that uses Sequelize and Express for the backend API to the TicketHub-Front End**
