@@ -3,7 +3,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const Cors = require('cors');
 const logger = require('morgan');
-const passport = require('passport');
 const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
@@ -23,8 +22,6 @@ app.use(logger('dev', {skip: function (req, res) { return res.statusCode < 400}
 app.use(logger('short', {
   stream: fs.createWriteStream(path.join(__dirname, '../api.log'), { flags: 'a' })
 }))
-
-app.use(passport.initialize());
 
 // Auth Route
 const authRoute = require('./routes/auth');
